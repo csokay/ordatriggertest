@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="ordatriggertest" uuid="77F66BA5340A419A9E0DDD1E9D2BADCE" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Table" uuid="959CF8B7CA5F4E84A1C6532C55C732E2" id="1">
+		<field name="ID" uuid="32AAC0401A7641B3BA73EEAD7092865E" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="createdDate" uuid="1B37CE4173E1458FA83F3212CBE98AB2" type="8" never_null="true" id="2"/>
+		<field name="createdTime" uuid="965D327A188D4DF9A16F30C360C5B0C3" type="9" never_null="true" id="3"/>
+		<field name="Info" uuid="0A96EFA6F4DD4BFCAB5D967E77911888" type="10" limiting_length="255" never_null="true" id="4"/>
+		<primary_key field_name="ID" field_uuid="32AAC0401A7641B3BA73EEAD7092865E"/>
+		<table_extra trigger_insert="true">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="40" top="40" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="410DD3E378E04B6693C4A9C9155F519A" type="7">
+		<field_ref uuid="32AAC0401A7641B3BA73EEAD7092865E" name="ID">
+			<table_ref uuid="959CF8B7CA5F4E84A1C6532C55C732E2" name="Table"/>
+		</field_ref>
+	</index>
+</base>

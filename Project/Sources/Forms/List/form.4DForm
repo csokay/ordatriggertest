@@ -1,0 +1,123 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 615,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "List",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"oList": {
+					"type": "listbox",
+					"left": 0,
+					"top": 41,
+					"width": 615,
+					"height": 409,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"selectionMode": "single",
+					"right": 615,
+					"sizingX": "grow",
+					"hideFocusRing": true,
+					"scrollbarHorizontal": "automatic",
+					"dataSource": "Form:C1466.List",
+					"columns": [
+						{
+							"header": {
+								"text": "created",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"width": 150,
+							"footer": {
+								"name": "Footer1"
+							},
+							"enterable": false,
+							"resizable": false,
+							"dataSource": "DisplayCreated"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Info"
+							},
+							"name": "Column2",
+							"width": 450,
+							"footer": {
+								"name": "Footer2"
+							},
+							"minWidth": 450,
+							"dataSource": "This:C1470.Info"
+						}
+					]
+				},
+				"oAdd": {
+					"type": "button",
+					"top": 10,
+					"left": 12,
+					"width": 80,
+					"height": 20,
+					"dataSource": "",
+					"text": "Add…",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/oAdd.4dm",
+					"focusable": false
+				},
+				"oReload": {
+					"type": "button",
+					"top": 10,
+					"left": 521,
+					"width": 80,
+					"height": 20,
+					"dataSource": "",
+					"text": "Reload",
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"method": "ObjectMethods/oReload.4dm",
+					"focusable": false
+				}
+			}
+		}
+	],
+	"geometryStamp": 28,
+	"method": "method.4dm",
+	"menuBar": "Menu1"
+}
